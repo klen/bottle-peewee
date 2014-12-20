@@ -72,6 +72,11 @@ Usage
     assert [user for user in User.select()]
 
 
+Configuration
+-------------
+
+PEEWEE_CONNECTION -- A connection string to database
+
 .. _bugtracker:
 
 Bug tracker

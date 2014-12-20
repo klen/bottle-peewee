@@ -25,20 +25,19 @@ class PeeweePlugin(object):
         self.database = None
         self.connection = connection or self.default_connection
         self.proxy = Proxy()
-        self.uri = None
         self.serializer = Serializer()
 
     def setup(self, app):
         """ Initialize the application. """
 
-        self.connection = app.config.get('DATABASE_URI', self.connection)
+        self.connection = app.config.get('PEEWEE_CONNECTION', self.connection)
         self.database = connect(self.connection)
         self.proxy.initialize(self.database)
 
     def apply(self, callback, route):
 
         def wrapper(*args, **kwargs):
-            if self.uri.startswith('sqlite'):
+            if self.connectiion.startswith('sqlite'):
                 return callback(*args, **kwargs)
 
             self.database.connect()
