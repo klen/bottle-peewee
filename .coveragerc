@@ -1,0 +1,5 @@
+[report]
+source=bottle_peewee
+
+[run]
+source=bottle_peewee
