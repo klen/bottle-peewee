@@ -37,7 +37,7 @@ class PeeweePlugin(object):
     def apply(self, callback, route):
 
         def wrapper(*args, **kwargs):
-            if self.connectiion.startswith('sqlite'):
+            if self.connection.startswith('sqlite'):
                 return callback(*args, **kwargs)
 
             self.database.connect()
