@@ -47,6 +47,6 @@ setup(
         'Topic :: Utilities',
     ],
 
-    py_modules=['bootle_peewee'],
+    py_modules=['bottle_peewee'],
     install_requires=install_requires,
 )
