@@ -7,7 +7,7 @@ from playhouse.db_url import connect
 from playhouse.shortcuts import model_to_dict, dict_to_model
 
 
-__version__ = "0.1.3"
+__version__ = "0.1.4"
 __project__ = "bottle-peewee"
 __author__ = "Kirill Klenov <horneds@gmail.com>"
 __license__ = "MIT"
