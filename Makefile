@@ -78,10 +78,3 @@ test: $(VIRTUALENV)/bin/py.test
 
 .PHONY: t
 t: test
-
-.PHONY: doc
-doc: docs $(VIRTUALENV)
-	@$(VIRTUALENV)/bin/pip install sphinx
-	@$(VIRTUALENV)/bin/pip install sphinx-pypi-upload
-	@$(VIRTUALENV)/bin/python setup.py build_sphinx --source-dir=docs/ --build-dir=docs/_build --all-files
-	@$(VIRTUALENV)/bin/python setup.py upload_sphinx --upload-dir=docs/_build/html
